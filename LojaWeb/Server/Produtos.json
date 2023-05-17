@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "Descricao": "TV LCD 55",
+    "Quantidade": 0,
+    "Valor": 2199,
+    "Ativo": true
+  },
+  {
+    "Id": 2,
+    "Descricao": "TV OLED 42",
+    "Quantidade": 0,
+    "Valor": 4999,
+    "Ativo": true
+  },
+  {
+    "Id": 3,
+    "Descricao": "DVD",
+    "Quantidade": 0,
+    "Valor": 299,
+    "Ativo": true
+  },
+  {
+    "Id": 5,
+    "Descricao": "Samsung Galaxy S23 Ultra 512GB",
+    "Quantidade": 0,
+    "Valor": 4999,
+    "Ativo": true
+  },
+  {
+    "Id": 6,
+    "Descricao": "Samsung Galaxy S22 FE",
+    "Quantidade": 0,
+    "Valor": 1399,
+    "Ativo": true
+  },
+  {
+    "Id": 7,
+    "Descricao": "Microsoft Mouse \u00D3tico ",
+    "Quantidade": 0,
+    "Valor": 255,
+    "Ativo": true
+  }
+]
