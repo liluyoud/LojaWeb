@@ -1,0 +1,38 @@
+@page "/produtos"
+@inject HttpClient Http
+
+<PageTitle>Produtos</PageTitle>
+
+<MudText Typo="Typo.h3">Produtos</MudText>
+@if (_produtos == null) {
+    <MudProgressCircular Color="Color.Success" Indeterminate="true" />
+} else { 
+    <MudTable Items="@_produtos" Hover="true" SortLabel="Sort By">
+        <HeaderContent>
+            <MudTh><MudTableSortLabel SortBy="new Func<Produto, object>(x=>x.Id)">Id</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Produto, object>(x=>x.Descricao!)">Produto</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Produto, object>(x=>x.Quantidade)">Qtd</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Produto, object>(x=>x.Valor)">Valor</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Produto, object>(x=>x.Ativo)">Ativo</MudTableSortLabel></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Id">@context.Id</MudTd>
+            <MudTd DataLabel="Produto">@context.Descricao</MudTd>
+            <MudTd DataLabel="Quantidade">@context.Quantidade</MudTd>
+            <MudTd DataLabel="Valor">@context.Valor.ToString("N2")</MudTd>
+            <MudTd DataLabel="Ativo">@context.Ativo</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager PageSizeOptions="new int[]{10, 50, 100}" />
+        </PagerContent>
+    </MudTable>
+}
+
+@code {
+    private List<Produto>? _produtos;
+
+     protected override async Task OnInitializedAsync()
+    {
+        _produtos = await Http.GetFromJsonAsync<List<Produto>>("Produto");
+    }
+}
