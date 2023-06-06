@@ -3,10 +3,13 @@
 
 <PageTitle>Produtos</PageTitle>
 
-<MudText Typo="Typo.h3">Produtos</MudText>
+<MudText Typo="Typo.h4">Produtos</MudText>
 @if (_produtos == null) {
     <MudProgressCircular Color="Color.Success" Indeterminate="true" />
-} else { 
+} else {
+
+    <MudLink Href="/produtos/adicionar">Adicionar Produto...</MudLink>
+
     <MudTable Items="@_produtos" Hover="true" SortLabel="Sort By">
         <HeaderContent>
             <MudTh><MudTableSortLabel SortBy="new Func<Produto, object>(x=>x.Id)">Id</MudTableSortLabel></MudTh>

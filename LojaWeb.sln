@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaWeb.Server", "LojaWeb\Server\LojaWeb.Server.csproj", "{E1865B91-8ED5-431E-AFA0-3D14996EE591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaWeb.Server", "LojaWeb\Server\LojaWeb.Server.csproj", "{E1865B91-8ED5-431E-AFA0-3D14996EE591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaWeb.Client", "LojaWeb\Client\LojaWeb.Client.csproj", "{793F3C05-9E3E-415E-A1C8-95409011EA8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaWeb.Client", "LojaWeb\Client\LojaWeb.Client.csproj", "{793F3C05-9E3E-415E-A1C8-95409011EA8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaWeb.Shared", "LojaWeb\Shared\LojaWeb.Shared.csproj", "{2672421C-0B29-4DF3-92B3-688B107A5839}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaWeb.Shared", "LojaWeb\Shared\LojaWeb.Shared.csproj", "{2672421C-0B29-4DF3-92B3-688B107A5839}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

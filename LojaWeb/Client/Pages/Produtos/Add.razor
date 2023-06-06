@@ -1,0 +1,27 @@
+﻿@page "/produtos/adicionar"
+
+<PageTitle>Produtos</PageTitle>
+
+<MudText Typo="Typo.h4">Adicionar Produtos</MudText>
+
+<MudPaper Class="mt-4 pt-0 pb-4 px-8" Elevation="3">
+    <MudForm>
+        <MudTextField T="string" Label="Produto" Required="true"
+                      RequiredError="Nome do produto é obrigatório" />
+        <MudNumericField Label="Valor do Produto" Format="N2" T="double?"
+                         HelperText="1.999,99" />
+    </MudForm>
+</MudPaper>
+
+<div class="mt-4">
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true">
+        Salvar
+    </MudButton>
+    <MudButton Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true">
+        Novo
+    </MudButton>
+    <MudButton Variant="Variant.Filled" DisableElevation="true">
+        Voltar
+    </MudButton>
+</div>
+
