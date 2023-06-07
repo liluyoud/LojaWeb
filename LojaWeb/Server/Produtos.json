@@ -42,52 +42,10 @@
     "Ativo": true
   },
   {
-    "Id": 1,
-    "Descricao": "Teste",
-    "Quantidade": 0,
-    "Valor": 1000,
-    "Ativo": true
-  },
-  {
     "Id": 8,
     "Descricao": "Galaxy Book 3",
     "Quantidade": 0,
-    "Valor": 1589,
-    "Ativo": true
-  },
-  {
-    "Id": 1,
-    "Descricao": "Celular Samsung",
-    "Quantidade": 0,
-    "Valor": 789.23,
-    "Ativo": true
-  },
-  {
-    "Id": 2,
-    "Descricao": "Teste 2 Produtp",
-    "Quantidade": 0,
-    "Valor": 123,
-    "Ativo": true
-  },
-  {
-    "Id": 3,
-    "Descricao": "Teste 3",
-    "Quantidade": 0,
-    "Valor": 123,
-    "Ativo": true
-  },
-  {
-    "Id": 4,
-    "Descricao": "Teste 4",
-    "Quantidade": 0,
-    "Valor": 1234,
-    "Ativo": true
-  },
-  {
-    "Id": 5,
-    "Descricao": "Teste 5",
-    "Quantidade": 0,
-    "Valor": 5555,
+    "Valor": 7999,
     "Ativo": true
   }
 ]

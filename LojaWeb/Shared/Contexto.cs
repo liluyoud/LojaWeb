@@ -3,6 +3,8 @@ namespace LojaWeb.Shared;
 using System.Text.Json;
 
 public class Contexto {
+
+    private int maxProdutoId = 0;
     public List<Produto> Produtos { get; set; }
     public List<Vendedor> Vendedores { get; set; }
 
@@ -24,7 +26,12 @@ public class Contexto {
             if (produtos != null)
                 Produtos = produtos;
         }
-        var maxId = Produtos.Max(p => p.Id);
-        Produto.UpdateNextId(maxId);
+        maxProdutoId = Produtos.Max(p => p.Id);
+    }
+
+    public void NovoProduto(Produto produto)
+    {
+        produto.Id = ++maxProdutoId;
+        Produtos.Add(produto);
     }
 }

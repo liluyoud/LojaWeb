@@ -7,8 +7,8 @@
 
 <MudPaper Class="mt-4 pt-0 pb-4 px-8" Elevation="3">
     <MudForm>
-        <MudTextField @bind-Value="idProduto" T="int" Label="Produto" Required="true"
-                      RequiredError="Id do produto é obrigatório" />
+@*        <MudTextField @bind-Value="idProduto" T="int" Label="Produto" Required="true"
+                      RequiredError="Id do produto é obrigatório" />*@
         <MudTextField @bind-Value="nomeProduto" T="string" Label="Produto" Required="true"
                       RequiredError="Nome do produto é obrigatório"  />
         <MudNumericField @bind-Value="valorProduto" T="double" Label="Valor do Produto" Format="N2" T="double?"
@@ -31,7 +31,7 @@
 <p>@message</p>
 
 @code {
-    int idProduto;
+    //int idProduto;
     string? nomeProduto;
     double valorProduto;
     string? message;
@@ -41,7 +41,7 @@
         if (!string.IsNullOrEmpty(nomeProduto))
         {
             var produto = new Produto(nomeProduto, valorProduto);
-            produto.Id = idProduto;
+            //produto.Id = idProduto;
             var result = await Http.PostAsJsonAsync("Produto", produto);
             if (result.IsSuccessStatusCode)
             {

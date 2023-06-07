@@ -26,7 +26,7 @@ public class ProdutoController : ControllerBase
     [HttpPost]
     public Produto PostProduto([FromBody] Produto produto)
     {
-        _db.Produtos.Add(produto);
+        _db.NovoProduto(produto);
         _db.Salvar();
         return produto;
     }
