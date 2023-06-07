@@ -1,4 +1,5 @@
 ﻿@page "/produtos/adicionar"
+@inject HttpClient Http
 
 <PageTitle>Produtos</PageTitle>
 
@@ -6,18 +7,18 @@
 
 <MudPaper Class="mt-4 pt-0 pb-4 px-8" Elevation="3">
     <MudForm>
-        <MudTextField T="string" Label="Produto" Required="true"
-                      RequiredError="Nome do produto é obrigatório" />
-        <MudNumericField Label="Valor do Produto" Format="N2" T="double?"
+        <MudTextField @bind-Value="nomeProduto" T="string" Label="Produto" Required="true"
+                      RequiredError="Nome do produto é obrigatório"  />
+        <MudNumericField @bind-Value="valorProduto" T="double" Label="Valor do Produto" Format="N2" T="double?"
                          HelperText="1.999,99" />
     </MudForm>
 </MudPaper>
 
 <div class="mt-4">
-    <MudButton Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true">
+    <MudButton OnClick="AdicionarProduto" Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true">
         Salvar
     </MudButton>
-    <MudButton Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true">
+    <MudButton OnClick="NovoProduto" Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true">
         Novo
     </MudButton>
     <MudButton Variant="Variant.Filled" DisableElevation="true">
@@ -25,3 +26,31 @@
     </MudButton>
 </div>
 
+<p>@message</p>
+
+@code {
+    string? nomeProduto;
+    double valorProduto;
+    string? message;
+
+    protected async Task AdicionarProduto()
+    {
+        if (!string.IsNullOrEmpty(nomeProduto))
+        {
+            var produto = new Produto(nomeProduto, valorProduto);
+            var result = await Http.PostAsJsonAsync("Produto", produto);
+            if (result.IsSuccessStatusCode)
+            {
+                message = "adicionado com sucesso";
+            }
+        }
+    }
+
+    protected void NovoProduto()
+    {
+        nomeProduto = "";
+        valorProduto = 0;
+        message = "";
+    }
+
+}

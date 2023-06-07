@@ -34,7 +34,7 @@
 @code {
     private List<Produto>? _produtos;
 
-     protected override async Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
         _produtos = await Http.GetFromJsonAsync<List<Produto>>("Produto");
     }

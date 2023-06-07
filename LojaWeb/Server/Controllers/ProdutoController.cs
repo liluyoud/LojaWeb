@@ -9,6 +9,7 @@ public class ProdutoController : ControllerBase
 {
     private readonly ILogger<WeatherForecastController> _logger;
     private Contexto _db;
+
     public ProdutoController(ILogger<WeatherForecastController> logger)
     {
         _logger = logger;
@@ -22,4 +23,11 @@ public class ProdutoController : ControllerBase
         return _db.Produtos;
     }
 
+    [HttpPost]
+    public Produto PostProduto([FromBody] Produto produto)
+    {
+        _db.Produtos.Add(produto);
+        _db.Salvar();
+        return produto;
+    }
 }
